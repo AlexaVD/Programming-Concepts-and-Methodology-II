@@ -11,8 +11,6 @@ private:
     int spaceBefore;
     int spaceBetween;
     int spacesOnRightFace;
-    int row;
-    int col;
     string output;
 
 
