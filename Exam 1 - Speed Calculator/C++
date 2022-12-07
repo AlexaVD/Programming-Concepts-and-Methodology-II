@@ -1,0 +1,22 @@
+Exam Requirements
+Create a YouTube video between three to four minutes maximum describing a program that calculates the speed of a vehicle in miles per hour base on the users input of the distance and time.  You must demonstrate the use of the debugger tools.  Several video lessons in this module have covered how to use the debugging tools to "step into", "step over", and "step out" of code that stops at specific break points (the red dot) that is placed on the code within Visual Studio.
+Your program must contain the calcSpeed function as described below:
+calcSpeed - This function must return a double and must contain two parameters
+The first argument must be of type double with the name distancePar. Assume that the user will enter a value representing miles
+The second argument must be of type double with the name timePar. Assume that the user will enter a value representing hours.
+This function will return the distancePar divided by the timePar to calculate the miles per hour result. It doesn't matter how many significant digits are after the decimal point (e.g. it's okay to have a bunch of digits after the decimal point such as 35.235112325)
+Consider the following sample execution of the program.
+----------------------------------------------------------------
+Car rate calculator
+Enter the distance traveled in miles: 60
+Enter the time it took to travel this distance in hours: 1
+Your vehicle was traveling 60.0 miles per hour
+-----------------------------------------------------------------
+
+Consider another sample execution of the program.
+----------------------------------------------------------------
+Car rate calculator
+Enter the distance traveled in miles: 75.5
+Enter the time it took to travel this distance in hours: 2.25
+Your vehicle was traveling 33.5556 miles per hour
+-----------------------------------------------------------------
