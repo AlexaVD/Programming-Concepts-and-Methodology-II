@@ -1,0 +1,29 @@
+int getMultiplierArrSum(int multiplierArr[]) {
+	int multiplierSum = 0;
+	int cnt;
+
+	//determine the sum of the multiplierArr (e.g., if multiplierArr = {0,0,0,0,0,0,0,1,0,1}
+	//then the sum is 1x2^0 + 0x2^1 + 1x2^2 = 5 assuming we start from the RHS.
+	for (cnt = 0; cnt < NUMOFENTRIES; cnt++) {
+		multiplierSum = multiplierSum + multiplierArr[cnt] * pow(2, cnt);
+	}
+	return multiplierSum;
+}
+
+void generateNextMultipliers(int multiplierArr[]) {
+	int multiplierSum = 0;
+	int cnt;
+
+	multiplierSum = getMultiplierArrSum(multiplierArr);
+	multiplierSum++; //increment this value for the next multiplierArr configuration
+
+	//establish the new multiplierArr values based on the recent increment of multiplierSum
+	for (cnt = NUMOFENTRIES-1; cnt >= 0; cnt--) {
+		if (multiplierSum >= pow(2, cnt)) {
+			multiplierSum = multiplierSum - pow(2, cnt);
+			multiplierArr[cnt] = 1;
+		}
+		else
+			multiplierArr[cnt] = 0;
+	}
+}
